@@ -1,0 +1,104 @@
+1) Steps to Install Docker on Windows
+
+The following steps are involved in installing Docker Desktop on Windows:
+
+Step 1: Check System Requirements
+Windows 10/11 64-bit
+Minimum 4 GB RAM
+Virtualization enabled
+WSL 2 backend supported
+
+Docker Desktop on Windows officially supports WSL 2 (recommended).
+
+Step 2: Enable WSL 2
+
+Open PowerShell as Administrator:
+
+wsl --install
+
+Restart the system after installation.
+
+Step 3: Download Docker Desktop
+
+Download Docker Desktop from official Docker website:
+
+Download Docker Desktop for Windows
+
+The official Windows installation flow is provided by Docker Desktop docs.
+
+Step 4: Install Docker Desktop
+Double-click Docker Desktop Installer.exe
+Select:
+✅ Use WSL 2 instead of Hyper-V
+✅ Add desktop shortcut
+Click OK → Install
+Restart system
+
+Docker’s official installer recommends the WSL 2 engine on Windows.
+
+Step 5: Launch Docker
+Open Docker Desktop
+Wait until whale icon becomes active
+Verify installation:
+docker --version
+Step 6: Test Docker
+
+Run first container:
+
+docker run hello-world
+
+This verifies that Docker Engine, CLI, and Desktop are working correctly.
+
+2) Common Docker Commands
+
+Below are the important Docker commands usually asked in lab exams.
+
+a) Check Docker Version
+docker --version
+b) Download an Image
+docker pull ubuntu
+
+Downloads image from Docker Hub.
+
+c) List Images
+docker images
+d) Run a Container
+docker run -it ubuntu
+e) Run Container in Background
+docker run -d nginx
+f) List Running Containers
+docker ps
+g) List All Containers
+docker ps -a
+h) Stop Container
+docker stop <container_id>
+i) Start Container
+docker start <container_id>
+j) Remove Container
+docker rm <container_id>
+k) Remove Image
+docker rmi ubuntu
+l) Build Docker Image
+docker build -t myapp .
+
+Builds image from Dockerfile.
+
+m) Execute Command Inside Container
+docker exec -it <container_id> bash
+n) View Logs
+docker logs <container_id>
+3) Output
+
+Successful output command:
+
+docker run hello-world
+
+Output:
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+Conclusion
+
+Thus, the steps involved in installing Docker Desktop on Windows using WSL 2 backend and the commonly used Docker commands were studied and executed successfully.
+
+Thank You
